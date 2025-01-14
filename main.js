@@ -7,7 +7,7 @@ const chalk = require('chalk')
 const FileType = require('file-type')
 const path = require('path')
 const axios = require('axios')
-const PhoneNumber = require('awesome-phonenumber')
+const PhoneNumber = require('+40 0793587957')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, sleep, reSize } = require('./lib/myfunc')
 const { default: XeonBotIncConnect, delay, PHONENUMBER_MCC, makeCacheableSignalKeyStore, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, Browsers} = require("@whiskeysockets/baileys")
@@ -27,7 +27,7 @@ const store = makeInMemoryStore({
 let phoneNumber = "50931461936"
 let owner = JSON.parse(fs.readFileSync('./lib/database/owner.json'))
 
-const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
+const pairingCode = !!phoneNumber || process.argv.includes("6B14-N815")
 const useMobile = process.argv.includes("--mobile")
 
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
@@ -52,7 +52,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
          let jid = jidNormalizedUser(key.remoteJid)
          let msg = await store.loadMessage(jid, key.id)
 
-         return msg?.message || ""
+         return msg?.message || "{"noiseKey":{"private":{"type":"Buffer","data":"yIzQSx28aA1OeRgNdV49F4jnVHkNNOTV162r2vyklU0="},"public":{"type":"Buffer","data":"eEy2Gjh6Rf2sCwV2UJS+Wssm1TKkmIT+MYfd8rSsWFc="}},"pairingEphemeralKeyPair":{"private":{"type":"Buffer","data":"kMYQJNZPEFTjWTx9YLWeKU8oebRUU0kvoirfV60KPEk="},"public":{"type":"Buffer","data":"82K0UUHWOV9Kf4O82KtXSqPpplvbBnKqt0aHT1Kmzyc="}},"signedIdentityKey":{"private":{"type":"Buffer","data":"OCKN9C9cpxJ93tIxJq/ZzI41icsD4OcFueqGhSReInQ="},"public":{"type":"Buffer","data":"KYHwjg7BJRLbndplhsg6G7A4AepimfEtMKKOOIO7oEs="}},"signedPreKey":{"keyPair":{"private":{"type":"Buffer","data":"sObIdGxN7YHDeZu9NbGJNmU8Zylh32bB/8Ls7DUGdmE="},"public":{"type":"Buffer","data":"ciFxrX+jpgOR1Weaxt/ZBdYnst4aKLkuSOlZX+4eyHo="}},"signature":{"type":"Buffer","data":"niaQPzlg9UAKpZBtYk60Woo/8jndgEjD86sInuH4GK/pe8kVy5s57IazrQYJGCkct3DQ0CruTR+SBb9biIQpDQ=="},"keyId":1},"registrationId":1,"advSecretKey":"0tvk6BoNvBkphrFB9ReoYlFZZ0KH4D7oxHyEpmnPmpo=","processedHistoryMessages":[{"key":{"remoteJid":"40793587957@s.whatsapp.net","fromMe":true,"id":"117C7EB8AA28A9D87CE2DCBE10C8276C"},"messageTimestamp":1736885214},{"key":{"remoteJid":"40793587957@s.whatsapp.net","fromMe":true,"id":"E961812B3BD939C01D36948FC0C4C4C8"},"messageTimestamp":1736885214},{"key":{"remoteJid":"40793587957@s.whatsapp.net","fromMe":true,"id":"837A644D8866B1F66B81804C9122F08D"},"messageTimestamp":1736885220}],"nextPreKeyId":31,"firstUnuploadedPreKeyId":31,"accountSyncCounter":1,"accountSettings":{"unarchiveChats":false},"deviceId":"sfz2Fa3EQl-cHRXeVbvyJQ","phoneId":"13ca1906-21a1-4edb-99a1-662b323ad993","identityId":{"type":"Buffer","data":"ue0hq1nm1SwbEbbOK+iBS7QVYLY="},"registered":true,"backupToken":{"type":"Buffer","data":"i7MFyXEaZGMYwj7asIbuByJib/M="},"registration":{},"pairingCode":"6B14N815","me":{"id":"40793587957:4@s.whatsapp.net","lid":"97032488415290:4@lid","name":"Mișu"},"account":{"details":"CLu7uuADENiHm7wGGAEgACgA","accountSignatureKey":"CLt9RPSOYoWXIwVNQvFHQxC7zwsJ3QjYOKpBv1hMn0Q=","accountSignature":"PKeQ/wm3WTK8TqargTemrwrMhKp3LcevkdWZGsnq2U7yEbNq0UCV/Y8Afdellg+bsw1hqtPTx3nYZczSWC50Ag==","deviceSignature":"zJzdrmePyjnCKoWM0wZXCI3xEImTW7JBlhf8hff0Jk0gbiTmoNkMn05chrcJfe53cSVugVrrmRG6XO8gy8k1DA=="},"signalIdentities":[{"identifier":{"name":"40793587957:4@s.whatsapp.net","deviceId":0},"identifierKey":{"type":"Buffer","data":"BQi7fUT0jmKFlyMFTULxR0MQu88LCd0I2DiqQb9YTJ9E"}}],"platform":"android","lastAccountSyncTimestamp":1736885212,"myAppStateKeyId":"AAAAAI87"}" 
       },
       msgRetryCounterCache, // Resolve waiting messages
       defaultQueryTimeoutMs: undefined, // for this issues https://github.com/WhiskeySockets/Baileys/issues/276
@@ -67,7 +67,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
 
       let phoneNumber
       if (!!phoneNumber) {
-         phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
+         phoneNumber = phoneNumber.replace(/[+40 0793597957]/g, '')
 
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
             console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +50931461936")))
