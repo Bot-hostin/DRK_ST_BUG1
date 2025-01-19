@@ -8,7 +8,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 */6 * * *'  # Relance toutes les 6 heures
+    - cron: '0 */6 * * *'  # BY 𝙎-𝙏𝞢𝞜 
 
 jobs:
   build:
